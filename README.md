@@ -1,2 +1,9 @@
-# -
-에러가 나니깐 공부입니다..
+# Study With Error
+
+## ES6
+
+- Function
+
+- Template Literal
+
+- Destructing
