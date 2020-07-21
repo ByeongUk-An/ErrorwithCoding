@@ -5,6 +5,7 @@ export default createGlobalStyle`
   ${reset};
   body {
       font-size:14px;
+      width:100%;
   }
   a {
       text-decoration: none;

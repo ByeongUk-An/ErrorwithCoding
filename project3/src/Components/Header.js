@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import images from "../img/1.png";
-import images1 from "../img/2.png";
+import images2 from "../img/2.png";
 const HeaderWrap = styled.header`
   width: 100%;
   height: 1000px;
@@ -24,7 +24,7 @@ const GnbListItem = styled.li`
   margin-right: 60px;
 `;
 const SubLogo = styled.div`
-  background: url(${images1}) no-repeat;
+  background: url(${images2}) no-repeat;
   width: 147px;
   height: 125px;
   position: absolute;
