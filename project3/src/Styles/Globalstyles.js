@@ -6,6 +6,7 @@ export default createGlobalStyle`
   body {
       font-size:14px;
       width:100%;
+      box-sizing:border-box;
   }
   a {
       text-decoration: none;

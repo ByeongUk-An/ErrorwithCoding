@@ -21,6 +21,8 @@ import food4t from "../img/food4t.png";
 import food5t from "../img/food5t.png";
 import food6t from "../img/food6t.png";
 import price from "../img/price.png";
+import section4title from "../img/section4title.png";
+import section5 from "../img/section5img.png";
 
 const SectionWrap = styled.div`
   background: #212121;
@@ -137,6 +139,23 @@ const Section3Boxitem_p = styled.p`
   margin-top: 27px;
   margin-bottom: 22px;
 `;
+// section4
+const Section4 = styled.section`
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #3e4136;
+  width: 100%;
+  height: 400px;
+  padding-top: 100px;
+`;
+const Section4para = styled.p`
+  color: #bbbbb9;
+  font-size: 20.85px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  line-height: 1.4;
+`;
+
 class Section extends React.Component {
   render() {
     return (
@@ -292,6 +311,20 @@ class Section extends React.Component {
             </Section3Box>
           </Section3Wrap>
         </Section3>
+        <Section4>
+          <img src={section4title} />
+          <Section4para>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+            optio eos neque officiis ipsa consectetur commodi placeat
+            perferendis eius quidem? Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Est cum adipisci dolorum officia magni, impedit
+            harum. Ullam soluta unde nostrum. Ullam ipsam quasi optio atque vero
+            fugiat molestiae sed!
+          </Section4para>
+          <img src={Brush} />
+          <img src={Brush} />
+          <img src={Brush} />
+        </Section4>
       </SectionWrap>
     );
   }
