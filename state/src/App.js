@@ -3,6 +3,7 @@ import Count from "./Count";
 import Input from "./Input";
 import Input02 from "./Input02";
 import Fun from "./Fun";
+import Fun1 from "./Fun1";
 import Fuck from "./Fuck";
 import Fuck1 from "./Fuck1";
 import Count1 from "./Count1";
@@ -30,7 +31,8 @@ class App extends React.Component {
         <Count /> */}
         {/* <Input /> */}
         {/* <Input02 /> */}
-        <Fun />
+        <Fun1 />
+        {/* <Fun /> */}
         {/* <Fuck /> */}
         {/* <Fuck1 /> */}
         {/* <Count1 /> */}

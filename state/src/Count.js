@@ -16,6 +16,7 @@ function Count() {
       <div>Count: {count}</div>
       <button onClick={plus}>+</button>
       <button onClick={minus}>-</button>
+      <h1>ddd</h1>
     </>
   );
 }
