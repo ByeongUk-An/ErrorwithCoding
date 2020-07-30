@@ -10,9 +10,16 @@ function Fun() {
     const { name, value } = e.target;
     const nextState = {
       ...state,
+      // [name]: value,
     };
     nextState[name] = value;
-    setState(state);
+    setState(nextState);
+  };
+  const del = (e) => {
+    setState({
+      firstName: "",
+      lastName: "",
+    });
   };
 
   const { firstName, lastName } = state;
@@ -22,9 +29,9 @@ function Fun() {
       <input name="firstName" type="text" value={firstName} onChange={add} />
       <input name="lastName" type="text" value={lastName} onChange={add} />
       <h3>
-        FirstName:{firstName},LastName:{lastName}
+        firstName:{firstName},lastName:{lastName}
       </h3>
-      <button>Clear</button>
+      <button onClick={del}>Clear</button>
     </>
   );
 }

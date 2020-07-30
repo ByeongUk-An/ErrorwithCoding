@@ -4,6 +4,9 @@ import Input from "./Input";
 import Input02 from "./Input02";
 import Fun from "./Fun";
 import Fuck from "./Fuck";
+import Fuck1 from "./Fuck1";
+import Count1 from "./Count1";
+import Classstate from "./Classstate";
 class App extends React.Component {
   state = {
     count: 0,
@@ -27,8 +30,11 @@ class App extends React.Component {
         <Count /> */}
         {/* <Input /> */}
         {/* <Input02 /> */}
-        {/* <Fun /> */}
-        <Fuck />
+        <Fun />
+        {/* <Fuck /> */}
+        {/* <Fuck1 /> */}
+        {/* <Count1 /> */}
+        {/* <Classstate /> */}
       </>
     );
   }
