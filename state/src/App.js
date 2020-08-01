@@ -9,6 +9,7 @@ import Fuck1 from "./Fuck1";
 import Count1 from "./Count1";
 import Classstate from "./Classstate";
 import Enter from "./Enter";
+import Count2 from "./Count2";
 class App extends React.Component {
   state = {
     count: 0,
@@ -39,6 +40,7 @@ class App extends React.Component {
         {/* <Count1 /> */}
         {/* <Classstate /> */}
         <Enter />
+        {/* <Count2 clear="clear" /> */}
       </>
     );
   }
