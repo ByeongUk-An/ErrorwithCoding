@@ -6,6 +6,7 @@ class Enter extends React.Component {
   };
   ent = (e) => {
     const { name, value } = e.target;
+    console.log(name,value)
     const proinput = {
       ...this.state,
       [name]: value,
