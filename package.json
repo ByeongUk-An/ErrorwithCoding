@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "jest-dom": "^4.0.0",
-    "react-router-dom": "^5.2.0",
-    "react-testing-library": "^8.0.1"
-  }
-}
