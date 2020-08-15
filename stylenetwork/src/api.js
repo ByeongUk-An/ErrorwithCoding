@@ -39,7 +39,7 @@ const getMovieApi = {
             language: "ko-KR"
         }
     }),
-    detail: id => api.get(`${id}`, {
+    detail: id => api.get(`movie/${id}`, {
         params: {
             api_key: "f3341ae37fe392613293736e7f266ef5",
             language: "ko-KR",

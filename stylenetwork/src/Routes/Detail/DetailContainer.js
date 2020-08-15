@@ -5,12 +5,12 @@ import getMovieApi from "../../api";
 export default class extends React.Component {
     constructor(props) {
         super(props);
-        const {location: pathname} = props;
+
         this.state = {
             result: null,
             error : null,
             loading: true,
-            thisMovie: pathname.include("/movie/")
+
         }
     }
 
@@ -22,17 +22,17 @@ export default class extends React.Component {
             },
             history: { push }
         } = this.props;
-        const {thisMovie} = this.state;
+
         const changId = parseInt(id);
         if(isNaN(changId)){
             return push("/");
         }
         let result = null;
         try {
-            if(thisMovie){
+
                 const request = await getMovieApi.detail(changId);
                 result = request.data;
-            }
+
             // other data
         }catch{
             this.setState({

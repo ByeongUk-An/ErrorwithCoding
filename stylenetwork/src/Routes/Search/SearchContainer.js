@@ -10,11 +10,19 @@ export default class extends React.Component {
         loading: false
     }
 
-    controllSubmit = () => {
+    controllSubmit = e => {
+        e.preventDefault();
         const {searchTerm} = this.state;
         if(searchTerm !== "") {
             this.useTermSearch();
         }
+    }
+
+    changeTerm = e => {
+        const { target: {value} } = e;
+        this.setState({
+            searchTerm: value
+        })
     }
 
     useTermSearch = async () => {
@@ -42,7 +50,7 @@ export default class extends React.Component {
     render() {
         const {searchResult,searchTerm,error,loading} = this.state;
         return(
-            <SearchPresenter searchResult={searchResult} searchTerm={searchTerm} error={error} loading={loading} controllSubmit={this.controllSubmit}/>
+            <SearchPresenter searchResult={searchResult} searchTerm={searchTerm} error={error} loading={loading} controllSubmit={this.controllSubmit} changeTerm={this.changeTerm}/>
         )
     }
 }
