@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link, withRouter } from "react-router-dom";
+import styled from "styled-components";
 
 const Header = styled.header`
-  width:100%;
-  height: 50px;
+  width: 100%;
+  height: 80px;
   background: #03a9f4;
   position: fixed;
   top: 0;
@@ -25,24 +25,33 @@ const ListItem = styled.li`
 `;
 
 const CustomLink = styled(Link)`
-  width:100%;
+  width: 100%;
   height: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  color: ${props => (props.current ? "#fff" : "#222")}
+  color: ${(props) => (props.current ? "#fff" : "#222")};
+  font-size: 20px;
+`;
+const LogoLink = styled(Link)`
+  font-size: 28px;
+  font-weight: 700;
 `;
 
-export default withRouter(({location: {pathname}}) => (
-    <Header>
-        <h1>LOGO</h1>
-        <Ullist>
-            <ListItem>
-                <CustomLink current={pathname === "/"} to="/">HOME</CustomLink>
-            </ListItem>
-            <ListItem>
-                <CustomLink current={pathname === "/search"} to="/search">SEARCH</CustomLink>
-            </ListItem>
-        </Ullist>
-    </Header>
+export default withRouter(({ location: { pathname } }) => (
+  <Header>
+    <LogoLink to="/">Movie</LogoLink>
+    <Ullist>
+      <ListItem>
+        <CustomLink current={pathname === "/"} to="/">
+          HOME
+        </CustomLink>
+      </ListItem>
+      <ListItem>
+        <CustomLink current={pathname === "/search"} to="/search">
+          SEARCH
+        </CustomLink>
+      </ListItem>
+    </Ullist>
+  </Header>
 ));
