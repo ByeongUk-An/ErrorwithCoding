@@ -6,11 +6,13 @@ import Redu from "./usereduser/Redu";
 import Callbacks from "./useCallback/Callbacks";
 import Ref from "./reff/Ref";
 import UseRef from "./reff/UseRef";
+import Input from "./useReff/Input";
 function App() {
   // const user = { name: "end", age: 2 };
   return (
     // <Ref />
-    <UseRef />
+    // <UseRef />
+    <Input />
     // <UserProvider value={user}>
     //   <Print />
     // </UserProvider>
