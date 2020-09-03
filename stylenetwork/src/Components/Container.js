@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Wrap = styled.section`
   :not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 `;
 

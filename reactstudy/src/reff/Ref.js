@@ -2,16 +2,23 @@ import React from "react";
 
 class Ref extends React.Component {
   constructor(props) {
-    this.h2 = React.createRef();
     super(props);
+    this.hello = React.createRef();
   }
 
   componentDidMount() {
-    console.log(this.h2);
+    console.log(this.hello.current);
+    const abc = this.hello.current;
+    console.log(abc);
   }
 
   render() {
-    return <h2 ref={this.h2}>안녕</h2>;
+    return (
+      <>
+        <h2 ref={this.hello}>안녕</h2>
+        <h2>hello</h2>
+      </>
+    );
   }
 }
 
