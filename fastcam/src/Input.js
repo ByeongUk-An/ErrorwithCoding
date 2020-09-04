@@ -17,7 +17,7 @@ function Input({ username, email, onChange, onCreate }) {
         onChange={onChange}
         value={email}
       />
-      <button onClick={onClick}>등록</button>
+      <button onClick={onCreate}>등록</button>
     </div>
   );
 }
