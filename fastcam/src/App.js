@@ -1,23 +1,41 @@
 import React, { useRef, useState } from "react";
-import InputSample from "./InputSample";
-import UserList from "./UserList";
-import CreateUser from "./CreateUser";
-import Test from "./Test";
-import Say from "./Say";
-import EventPractice from "./EventPractice";
-import ScrollBox from "./ScrollBox";
+import Input from "./Input";
+import Userlist from "./UserList";
 
-class App extends React.Component {
-  render() {
-    return (
-      <>
-        <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
-        <button onClick={() => this.ScrollBox.scrollToBottom()}>
-          맨 밑으로
-        </button>
-      </>
-    );
-  }
+function App() {
+  const [users, setUsers] = useState([
+    {
+      id: 1,
+      username: "안병욱",
+      email: "quddnr005@naver.com",
+    },
+    {
+      id: 2,
+      username: "문현규",
+      email: "vins@dev.com",
+    },
+    {
+      id: 3,
+      username: "배현아",
+      email: "gomdi@naver.com",
+    },
+  ]);
+
+  const nextId = useRef(4);
+
+  const onCreate = () => {
+    console.log(nextId.current); //4
+    nextId.current += 1;
+  };
+
+  const onClick = () => {};
+
+  return (
+    <>
+      <Input />
+      <Userlist users={users} />
+    </>
+  );
 }
 
 export default App;
