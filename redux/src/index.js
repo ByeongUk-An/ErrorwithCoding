@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "../src/Components/App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import boardReducer from "./App_reducer";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-let store = createStore(boardReducer);
+let store = createStore(todoApp);
 
 ReactDOM.render(
   <React.StrictMode>
