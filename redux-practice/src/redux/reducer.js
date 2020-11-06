@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO } from "./action";
+import { ADD_TODO, removeToDo, REMOVE_TODO } from "./action";
 
 const initialState = {
   todolist: [],
