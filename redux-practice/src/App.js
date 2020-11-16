@@ -1,59 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { addToDo, removeToDo } from "./redux/action";
+import { countminus, countplus } from "./reducer/action";
 
-const Todolist = () => {
-  const todos = useSelector((state) => {
-    return state.todolist;
-  });
+function App() {
   const dispatch = useDispatch();
-  const deletebtn = (curid) => dispatch(removeToDo(curid));
-  if (!todos || !todos.length) {
-    return <p>todoo없음</p>;
-  }
-  return (
-    <ul>
-      {todos.map((item) => {
-        // console.log(item.id);
-        return (
-          <li key={item.id}>
-            <span>{item.task}</span>
-            <button onClick={() => deletebtn(item.id)}>del</button>
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
+  const selector = useSelector((state) => state, []);
+  console.log(selector);
 
-const TodoInput = () => {
-  const dispatch = useDispatch();
-  const [todo, setTodo] = useState([]);
-  const handleChange = (event) => setTodo(event.target.value);
-  const handleClick = () => {
-    dispatch(addToDo(todo));
-    setTodo("");
+  const plusbtn = () => {
+    return dispatch(countplus());
+  };
+  const minusbtn = () => {
+    return dispatch(countminus());
   };
   return (
     <>
-      <input type="text" value={todo} onChange={handleChange} />
-      <button onClick={handleClick}>추가</button>
-    </>
-  );
-};
-
-// const ListItem = () => {
-//   return (
-
-//   )
-// }
-
-function App() {
-  return (
-    <>
-      <h1>hello</h1>
-      <TodoInput />
-      <Todolist />
+      <h1>Counter:{selector}</h1>
+      <button onClick={plusbtn}>Plus</button>
+      <button onClick={minusbtn}>Minus</button>
     </>
   );
 }
